@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>College Inquiry Chatbot</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Inquiry Chatbot</title>
 </head>
 <body>
-    <h2>Welcome to the College Inquiry Chatbot</h2>
-    <form action="/chat" method="post">
-        First Name: <input type="text" name="first_name" required><br>
-        Last Name: <input type="text" name="last_name" required><br>
-        Email: <input type="email" name="email" required><br>
-        Ask a Question: <input type="text" name="question" required><br>
-        <input type="submit" value="Ask">
-    </form>
+  <h1>Welcome to Our College Inquiry Chatbot</h1>
+  <p>Ask me anything about our college!</p>
+
+  <!-- Dialogflow Messenger integration -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="CollegeInquirychatbot"
+    agent-id="7f61137b-fec5-4195-a586-c219f66bfd1a"
+    language-code="en">
+  </df-messenger>
 </body>
 </html>
